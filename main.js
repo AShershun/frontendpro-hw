@@ -5,7 +5,7 @@ let result = ''
 
 if(isNaN(num1 + num2)) {
     result = `Ви не ввели число`;
-} else  if(num1 + num2) {
+} else if(num1 + num2) {
     switch (operation) {
         case 'add':
             result = num1 + ' + ' + num2 + " = " + (num1 + num2);
