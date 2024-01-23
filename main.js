@@ -8,13 +8,13 @@ if(isNaN(num1 + num2)) {
 } else  if(num1 + num2) {
     switch (operation) {
         case 'add':
-            result = num1 + ' + ' + num2 + " = " + (num1 + num2) + "\n";
+            result = num1 + ' + ' + num2 + " = " + (num1 + num2);
             break;
         case 'sub':
-            result = num1 + ' - ' + num2 + " = " + (num1 - num2) + "\n";
+            result = num1 + ' - ' + num2 + " = " + (num1 - num2);
             break;
         case 'mult':
-            result = num1 + ' * ' + num2 + " = " + (num1 * num2) + "\n";
+            result = num1 + ' * ' + num2 + " = " + (num1 * num2);
             break;
         case 'div':
             if(num2 === 0) {
