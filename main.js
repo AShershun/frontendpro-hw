@@ -18,7 +18,7 @@ let defaultArrSmiles = [{
     vote_count: 0
 }
 ];
-//Перевірка на наявність збереженних даних у localStorage
+//Перевірка на наявність збережених даних у localStorage
 let arrSmiles = localStorage
     .getItem('smiles') ? getSmilesFromLocalStorage() : defaultArrSmiles;
 
