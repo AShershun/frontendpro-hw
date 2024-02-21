@@ -1,0 +1,24 @@
+h1 {
+    text-align: center;
+}
+
+.vote_container {
+    display: flex;
+    margin: 0 auto;
+    width: 500px;
+    user-select: none;
+}
+
+.smile_item {
+    margin: 10px;
+}
+
+.smile {
+    margin-bottom: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.smile:hover {
+    font-size: 25px;
+}
