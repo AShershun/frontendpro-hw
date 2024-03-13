@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    background-color:rgb(178, 212, 242);
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.posts {
+    width: 25%;
+    height: 500px;
+    background-color: whitesmoke;
+    border-right: 1px solid black;
+
+    overflow: scroll;
+}
+
+
+.post-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    background-color: whitesmoke;
+}
+
+.information_block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 25%;
+    height: 100%;
+    background-color: whitesmoke;
+}
+
+.buyButton {
+    cursor: pointer;
+    width: 150px;
+    height: 25px;
+    border-radius: 10px;
+    background-color: rgb(43, 136, 219);
+    border:none;
+}
+
+.buyButton:hover {
+    background-color: rgb(26, 107, 177);
+}
+
+.buyButton:active {
+    background-color: rgb(43, 136, 219);
+}
+
+.post {
+    height: 30px;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+.post:hover {
+    background-color: #02ceff;
+}
+
+.postInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-title {
+    font-weight: bold;
+}
+
+.post-body {
+    margin-top: 10px;
+}
