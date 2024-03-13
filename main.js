@@ -4,7 +4,7 @@ const categoriesList = document.querySelector('#categories_list');
 const productsList = document.querySelector('#products_list');
 const infoBlock = document.querySelector('#product_info');
 
-let marketData = {
+const marketData = {
     'Smartphones': [{
         name: 'Google Pixel 8 Pro',
         info: '256 GB, RAM 12 GB'
@@ -55,6 +55,7 @@ function showCategories() {
         tempCategory.addEventListener('click', () => {
             showProducts(category);
         });
+
         categoriesList.appendChild(tempCategory);
     }
 }
@@ -62,6 +63,7 @@ function showCategories() {
 
 function showProducts(category) {
     productsList.innerHTML = '';
+
     marketData[category].forEach(product => {
         const tempProduct = document.createElement('div');
         tempProduct.textContent = product.name;
@@ -69,6 +71,7 @@ function showProducts(category) {
         tempProduct.addEventListener('click', () => {
             showInfo(product);
         });
+
         productsList.appendChild(tempProduct);
     })
 }
@@ -79,8 +82,10 @@ function showInfo(product) {
 
     const nameDiv = document.createElement('div');
     nameDiv.textContent = `${product.name}`;
+
     const infoDiv = document.createElement('div');
     infoDiv.textContent = `${product.info}`;
+
     const buyBtn = document.createElement('button');
     buyBtn.textContent = 'Buy';
     buyBtn.className = 'buy_btn';
@@ -89,6 +94,7 @@ function showInfo(product) {
         productsList.innerHTML = '';
         infoBlock.innerHTML = '';
     });
+
     infoBlock.appendChild(nameDiv);
     infoBlock.appendChild(infoDiv);
     infoBlock.appendChild(buyBtn);
