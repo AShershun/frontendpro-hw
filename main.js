@@ -276,14 +276,7 @@ function showMyOrders(orderList) {
 
         const orderHeader = document.createElement('div');
         orderHeader.classList.add('order_header');
-        orderHeader.addEventListener('click', () => {
-           const orderDetails = document.createElement('div');
-           orderDetails.innerHTML = `
-                <div><span>Price:</span> ${order.product.price} $</div>
-                <div><span>Quantity:</span> ${order.info.quantity}</div>`;
 
-            orderDiv.appendChild(orderDetails);
-        });
 
         const orderModelName = document.createElement('div');
         orderModelName.innerHTML = order.product.model;
@@ -298,10 +291,24 @@ function showMyOrders(orderList) {
         orderDate.textContent = new Date(order.info.date).toLocaleString();
         deleteOrderBtn.classList.add('delete_order_btn');
 
+        const detailBtn = document.createElement('div');
+        detailBtn.textContent = 'Details';
+        detailBtn.classList.add('detail_btn');
+        detailBtn.addEventListener('click', () => {
+            detailBtn.style.display = 'none';
+            const orderDetails = document.createElement('div');
+            orderDetails.innerHTML = `
+                <div><span>Price:</span> ${order.product.price} $</div>
+                <div><span>Quantity:</span> ${order.info.quantity}</div>`;
+
+            orderDiv.appendChild(orderDetails);
+        });
+
 
         ordersContainer.appendChild(orderDiv);
         orderDiv.appendChild(orderHeader);
         orderDiv.appendChild(orderDate);
+        orderDiv.appendChild(detailBtn);
         orderHeader.appendChild(orderModelName);
         orderHeader.appendChild(deleteOrderBtn);
     });

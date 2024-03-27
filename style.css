@@ -55,10 +55,6 @@ body {
     justify-content: space-between;
 }
 
-.order_model_name:hover {
-    opacity: 0.4;
-}
-
 .order_model_name {
     width: 80%;
     padding: 5px 5px 5px 0;
@@ -73,6 +69,16 @@ body {
 
 .delete_order_btn:hover {
     color: red;
+}
+
+.detail_btn {
+    text-decoration-line: underline;
+    color: #464343;
+    cursor: pointer;
+}
+
+.detail_btn:hover {
+    opacity: 0.4;
 }
 
 .wrapper {
