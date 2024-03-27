@@ -2,9 +2,84 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Homework</title>
+    <title>Homework 31</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<script src="main.js"></script>
+    <header class="header">
+        <div class="navbar">
+            <div class="navbar_item" id="navCategories">Categories</div>
+            <div class="navbar_item" id="navMyOrders">My orders</div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <div id="categories_list" class="categories"></div>
+        <div id="products_list" class="products"></div>
+        <div id="product_info" class = "info"></div>
+    </div>
+
+    <div id="contMyOrders" class="my_orders">
+        <div id="ordersContainer" class="order_wrapper">
+
+            <div class="order_block">
+                <div class="order_header">
+                    <div class="order_model_name">Smartphone</div>
+                    <div class="delete_order_btn">×</div>
+                </div>
+                <div class="order_date">Date: 10.02.1999 10:22</div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal_background" id="modalBackground">
+        <div id="orderModal" class="modal">
+            <button id="close-btn" >×</button>
+            <div class="modal_wrapper">
+                <div id="orderContainer" class="order_container">
+                    <h3 class="label_container">Order</h3>
+                    <div class="order_form">
+                        <div class="form_item">
+                            <p>Full name*</p>
+                            <input class="form_input" id="fullName" required>
+                        </div>
+                        <div class="form_item">
+                            <p>City*</p>
+                            <select class="form_input" id="citySelect"></select>
+                        </div>
+                        <div class="form_item">
+                            <p>Post office number*</p>
+                            <input class="form_input" id="numNP" required>
+                        </div>
+                        <div class="form_item">
+                            <p for="payment">Payment:</p>
+                            <input type="radio" id="payment-cash" name="payment" value="Сash">
+                            <span for="payment-cash">Postpayment</span>
+                            <input type="radio" id="payment-card" name="payment" value="Сard" checked>
+                            <span for="payment-card">Payment by card</span>
+                        </div>
+                        <div class="quantity-input form_item">
+                            <p>Quantity</p>
+                            <button id="decrementBtn">-</button>
+                            <input class="quantity_product form_input" type="number" id="quantityProduct" name="quantity" min="1" value="1" required>
+                            <button id="incrementBtn">+</button>
+                        </div>
+                        <div class="form_item">
+                            <p>Comment to order:</p>
+                            <textarea class="form_input comment-input" id="commentForOrder"></textarea>
+                        </div>
+                        <button type="submit" class="button_submit" id="confirmOrder">Confirm</button>
+                    </div>
+                </div>
+                <div id="infoOrder" class="info_container">
+                    <h3 class="label_container">Info Order</h3>
+                    <div class="detail_block" id="detailBlock">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
